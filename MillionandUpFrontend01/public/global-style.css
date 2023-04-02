@@ -1,0 +1,37 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+.title {
+  font-size: 200%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.filter-price-min .q-field__control {
+  border-radius: 4px 0 0 4px !important;
+}
+
+.filter-price-max .q-field__control {
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.q-dialog__backdrop {
+  background: rgba(0, 0, 0, 0.8) !important;
+}

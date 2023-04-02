@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  back:
+    build:
+      context: ./MillionandUpBackend01
+      dockerfile: MillionandUpBackend01/Dockerfile
+    ports:
+      - "5000:80"
+    networks:
+      - MillionandUpNet01
+  front:
+    build:
+      context: ./MillionandUpFrontend01
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./MillionandUpFrontend01:/usr/src/app
+    command: /bin/sh -c "npm install && quasar dev"
+    depends_on:
+      - back
+    networks:
+      - MillionandUpNet01
+networks:
+  MillionandUpNet01:
+    name: MillionandUpNet01
